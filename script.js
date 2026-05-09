@@ -1,7 +1,3 @@
-/* ============================================================
-   La Mesa Grande — script.js
-   ============================================================ */
-
 /* ---- Navbar scroll ---- */
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
