@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Mesa Grande — Sabor que se queda en la memoria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo">
+        <span class="logo-icon">🍽</span>
+        <span class="logo-text">La Mesa Grande</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#galeria">Galería</a>
+        <a href="#reservaciones">Reservaciones</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a href="#reservaciones" class="btn btn-primary nav-cta">Reservar Mesa</a>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg">
+      <div class="hero-particles" id="particles"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-tag">Cocina artesanal · Tradición viva</span>
+      <h1 class="hero-title">Sabor que se queda<br><em>en la memoria</em></h1>
+      <p class="hero-sub">Platos de todas las tradiciones, preparados con alma. Desde lo costeño hasta lo montañero, todo en una sola mesa.</p>
+      <div class="hero-btns">
+        <a href="#menu" class="btn btn-primary">Ver Menú</a>
+        <a href="#reservaciones" class="btn btn-outline">Reservar Mesa</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Desliza</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ===== BANNER DESTACADO ===== -->
+  <div class="ribbon-banner">
+    <span>🌿 Ingredientes frescos</span>
+    <span>🍳 Cocina al momento</span>
+    <span>🛵 Domicilio disponible</span>
+    <span>📅 Reservas por WhatsApp</span>
+    <span>🌿 Ingredientes frescos</span>
+    <span>🍳 Cocina al momento</span>
+    <span>🛵 Domicilio disponible</span>
+    <span>📅 Reservas por WhatsApp</span>
+  </div>
+
+  <!-- ===== MENÚ DESTACADO ===== -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Lo mejor de la casa</span>
+        <h2>Nuestro Menú</h2>
+        <p>Cada plato lleva tiempo, amor y los mejores ingredientes</p>
+      </div>
+
+      <div class="menu-filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="entradas">Entradas</button>
+        <button class="filter-btn" data-filter="fuertes">Platos Fuertes</button>
+        <button class="filter-btn" data-filter="postres">Postres</button>
+        <button class="filter-btn" data-filter="bebidas">Bebidas</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+
+        <div class="menu-card" data-category="entradas">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1639024471283-03518883512d?w=600&q=80" alt="Patacones con hogao" loading="lazy" />
+            <span class="card-badge">Popular</span>
+          </div>
+          <div class="card-body">
+            <h3>Patacones con Hogao</h3>
+            <p>Patacones crocantes sobre salsa de tomate y cebolla caramelizada, con queso costeño rallado.</p>
+            <div class="card-footer">
+              <span class="price">$18.000</span>
+              <a href="https://wa.me/573001234567?text=Hola!%20Quiero%20pedir%20Patacones%20con%20Hogao" target="_blank" class="btn btn-sm btn-whatsapp">🛒 Pedir</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="entradas">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" alt="Empanadas criollas" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3>Empanadas Criollas</h3>
+            <p>Masa de maíz rellena de papa y carne, fritas al momento. Con ají de maní artesanal.</p>
+            <div class="card-footer">
+              <span class="price">$14.000</span>
+              <a href="https://wa.me/573001234567?text=Hola!%20Quiero%20pedir%20Empanadas%20Criollas" target="_blank" class="btn btn-sm btn-whatsapp">🛒 Pedir</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="fuertes">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&q=80" alt="Bandeja Paisa" loading="lazy" />
+            <span class="card-badge">Especial</span>
+          </div>
+          <div class="card-body">
+            <h3>Bandeja La Mesa</h3>
+            <p>Frijoles, arroz, carne molida, chicharrón, huevo, aguacate, plátano maduro y arepa. La versión completa.</p>
+            <div class="card-footer">
+              <span class="price">$38.000</span>
+              <a href="https://wa.me/573001234567?text=Hola!%20Quiero%20pedir%20Bandeja%20La%20Mesa" target="_blank" class="btn btn-sm btn-whatsapp">🛒 Pedir</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="fuertes">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="Cazuela de mariscos" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3>Cazuela de Mariscos</h3>
+            <p>Camarones, calamares y mejillones en leche de coco con ají dulce. Servida con arroz de coco.</p>
+            <div class="card-footer">
+              <span class="price">$45.000</span>
+              <a href="https://wa.me/573001234567?text=Hola!%20Quiero%20pedir%20Cazuela%20de%20Mariscos" target="_blank" class="btn btn-sm btn-whatsapp">🛒 Pedir</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="postres">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80" alt="Tres leches" loading="lazy" />
+            <span class="card-badge">Favorito</span>
+          </div>
+          <div class="card-body">
+            <h3>Tres Leches Casero</h3>
+            <p>Bizcocho esponjoso bañado en tres tipos de leche, con crema batida y canela. Receta de abuela.</p>
+            <div class="card-footer">
+              <span class="price">$16.000</span>
+              <a href="https://wa.me/573001234567?text=Hola!%20Quiero%20pedir%20Tres%20Leches" target="_blank" class="btn btn-sm btn-whatsapp">🛒 Pedir</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" data-category="bebidas">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&q=80" alt="Jugos naturales" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3>Jugo Natural del Día</h3>
+            <p>Mango, maracuyá, guanábana, lulo o corozo. Preparado al instante con fruta fresca de temporada.</p>
+            <div class="card-footer">
+              <span class="price">$9.000</span>
+              <a href="https://wa.me/573001234567?text=Hola!%20Quiero%20pedir%20Jugo%20Natural" target="_blank" class="btn btn-sm btn-whatsapp">🛒 Pedir</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="menu-cta">
+        <a href="https://wa.me/573001234567?text=Hola!%20Quiero%20ver%20el%20men%C3%BA%20completo" target="_blank" class="btn btn-primary btn-lg">Ver Menú Completo en WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NOSOTROS ===== -->
+  <section class="about-section" id="nosotros">
+    <div class="about-bg-pattern"></div>
+    <div class="container about-grid">
+      <div class="about-visual">
+        <div class="about-img-main">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Interior La Mesa Grande" loading="lazy" />
+        </div>
+        <div class="about-img-accent">
+          <img src="https://images.unsplash.com/photo-1577106263724-2c8e03bfe9cf?w=400&q=80" alt="Chef cocinando" loading="lazy" />
+        </div>
+        <div class="about-badge-float">
+          <span class="big-num">+10</span>
+          <span>años de sabor</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="section-tag">Nuestra historia</span>
+        <h2>Una mesa para todos,<br>hecha con el corazón</h2>
+        <p>Empezamos con una cocina pequeña y un sueño enorme: que cualquier persona que entrara por esa puerta sintiera que alguien la estaba esperando con comida lista.</p>
+        <p>Hoy, La Mesa Grande es el punto de encuentro de familias, amigos y extraños que se vuelven conocidos alrededor de un plato bien hecho. Usamos ingredientes frescos de la región, recetas que vienen de generaciones y una cocina que nunca para.</p>
+        <div class="stats-row">
+          <div class="stat-item">
+            <span class="stat-num" data-target="10">0</span>
+            <span class="stat-label">Años de experiencia</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="60">0</span>
+            <span class="stat-label">Platos en el menú</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="5000">0</span>
+            <span class="stat-label">Clientes felices</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERÍA ===== -->
+  <section class="gallery-section" id="galeria">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Ambiente</span>
+        <h2>Así es La Mesa Grande</h2>
+        <p>Un espacio diseñado para quedarse</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item gi-large" data-src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" alt="Ambiente restaurante" loading="lazy" />
+          <div class="gallery-overlay"><span>Ver foto</span></div>
+        </div>
+        <div class="gallery-item" data-src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=85">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500&q=80" alt="Plato especial" loading="lazy" />
+          <div class="gallery-overlay"><span>Ver foto</span></div>
+        </div>
+        <div class="gallery-item" data-src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=85">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&q=80" alt="Mesa servida" loading="lazy" />
+          <div class="gallery-overlay"><span>Ver foto</span></div>
+        </div>
+        <div class="gallery-item gi-tall" data-src="https://images.unsplash.com/photo-1481833761820-0509d3217039?w=800&q=85">
+          <img src="https://images.unsplash.com/photo-1481833761820-0509d3217039?w=500&q=80" alt="Interior cálido" loading="lazy" />
+          <div class="gallery-overlay"><span>Ver foto</span></div>
+        </div>
+        <div class="gallery-item" data-src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=800&q=85">
+          <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=500&q=80" alt="Cocina activa" loading="lazy" />
+          <div class="gallery-overlay"><span>Ver foto</span></div>
+        </div>
+        <div class="gallery-item" data-src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=85">
+          <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=500&q=80" alt="Postre de la casa" loading="lazy" />
+          <div class="gallery-overlay"><span>Ver foto</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lbClose">✕</button>
+      <button class="lightbox-prev" id="lbPrev">‹</button>
+      <button class="lightbox-next" id="lbNext">›</button>
+      <img src="" alt="" id="lbImg" />
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIOS ===== -->
+  <section class="testimonios-section">
+    <div class="testi-bg"></div>
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-tag">Lo que dicen</span>
+        <h2>Clientes que ya tienen su mesa favorita</h2>
+      </div>
+      <div class="slider-wrap">
+        <div class="slider-track" id="sliderTrack">
+
+          <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <p>"La cazuela de mariscos es lo mejor que he comido en esta ciudad. Me hizo sentir en la costa con los ojos cerrados. Ya hice reserva para el próximo sábado."</p>
+            <div class="testi-author">
+              <div class="avatar">M</div>
+              <div>
+                <strong>María Fernanda R.</strong>
+                <span>Medellín</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <p>"Vinimos con toda la familia, eran 12 personas y nos atendieron de maravilla. El pollo sudado y los patacones estaban perfectos. Nos vamos a convertir en clientes fijos."</p>
+            <div class="testi-author">
+              <div class="avatar">C</div>
+              <div>
+                <strong>Carlos Andrés T.</strong>
+                <span>Bogotá</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <p>"El tres leches casero es cosa seria. No he probado uno igual en mucho tiempo. El ambiente es muy acogedor y los meseros son muy atentos. 100% recomendado."</p>
+            <div class="testi-author">
+              <div class="avatar">L</div>
+              <div>
+                <strong>Laura Sofía V.</strong>
+                <span>Cali</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <p>"Pedí domicilio y llegó todo caliente, bien empacado y con tiempo. Eso ya es diferente. La bandeja la mesa es una locura de buena. Volveré seguro."</p>
+            <div class="testi-author">
+              <div class="avatar">J</div>
+              <div>
+                <strong>Julián E.</strong>
+                <span>Barranquilla</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-dots" id="sliderDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESERVACIONES ===== -->
+  <section class="reservas-section" id="reservaciones">
+    <div class="container reservas-grid">
+      <div class="reservas-info">
+        <span class="section-tag">¿Listo para venir?</span>
+        <h2>Reserva tu mesa</h2>
+        <p>Garantiza tu lugar y llega sin preocupaciones. Te esperamos con la mesa puesta.</p>
+        <div class="reservas-options">
+          <a href="https://wa.me/573001234567?text=Hola!%20Quiero%20hacer%20una%20reservaci%C3%B3n" target="_blank" class="reserva-opt">
+            <span class="opt-icon">💬</span>
+            <div>
+              <strong>Por WhatsApp</strong>
+              <span>Respuesta inmediata</span>
+            </div>
+          </a>
+          <a href="tel:+573001234567" class="reserva-opt">
+            <span class="opt-icon">📞</span>
+            <div>
+              <strong>Por Teléfono</strong>
+              <span>+57 300 123 4567</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <form class="reservas-form" id="reservaForm" novalidate>
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          <span class="field-error"></span>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha" required />
+            <span class="field-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="hora">Hora</label>
+            <input type="time" id="hora" name="hora" required />
+            <span class="field-error"></span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="personas">Personas</label>
+            <select id="personas" name="personas" required>
+              <option value="">Selecciona</option>
+              <option value="1">1 persona</option>
+              <option value="2">2 personas</option>
+              <option value="3-4">3-4 personas</option>
+              <option value="5-6">5-6 personas</option>
+              <option value="7+">7 o más</option>
+            </select>
+            <span class="field-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="whatsapp">WhatsApp</label>
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+57 300 ..." required />
+            <span class="field-error"></span>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-full">Confirmar Reserva 🍽️</button>
+        <div class="form-success" id="formSuccess" style="display:none">
+          ✅ ¡Reserva enviada! Te contactaremos por WhatsApp para confirmar.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== UBICACIÓN + FOOTER ===== -->
+  <section class="ubicacion-section" id="contacto">
+    <div class="container ubicacion-grid">
+      <div class="ubicacion-info">
+        <span class="section-tag">Encuéntranos</span>
+        <h2>Horarios y Ubicación</h2>
+        <div class="horarios">
+          <div class="horario-row">
+            <span>Lunes – Viernes</span>
+            <span>11:30 am – 10:00 pm</span>
+          </div>
+          <div class="horario-row">
+            <span>Sábados</span>
+            <span>10:00 am – 11:00 pm</span>
+          </div>
+          <div class="horario-row">
+            <span>Domingos</span>
+            <span>10:00 am – 5:00 pm</span>
+          </div>
+        </div>
+        <div class="contacto-links">
+          <a href="tel:+573001234567">📞 +57 300 123 4567</a>
+          <a href="https://wa.me/573001234567" target="_blank">💬 WhatsApp</a>
+          <a href="https://www.instagram.com/" target="_blank">📸 Instagram</a>
+        </div>
+      </div>
+      <div class="mapa-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63589.03297853755!2d-75.59379!3d6.2441986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428dfb5b6f7d3%3A0x6c69dc065c90c429!2sMedell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1710000000000"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación La Mesa Grande">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🍽</span>
+        <span class="logo-text">La Mesa Grande</span>
+        <p>Cocina artesanal con alma. Hecha para compartir.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#galeria">Galería</a>
+        <a href="#reservaciones">Reservaciones</a>
+      </div>
+      <p class="footer-copy">© 2024 La Mesa Grande. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/573001234567?text=Hola!%20Vi%20su%20p%C3%A1gina%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
